@@ -6,6 +6,8 @@ export const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         marginHorizontal: 16,
+        maxWidth: 550,
+        margin: "auto"
     },
 
     bouton: {
@@ -30,7 +32,12 @@ export const styles = StyleSheet.create({
         fontSize: 25,
         color: "royalblue",
         textAlign: "center",
-        marginBottom: 25
+        marginBottom: 25,
     },
+    ligne:{
+        display: "flex",
+        flexDirection: "row",
+        alignItems: "center",
 
+    },
 });

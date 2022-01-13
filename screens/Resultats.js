@@ -2,11 +2,11 @@ import * as React from 'react';
 import {Button, View, SafeAreaView, TextInput, Text} from 'react-native';
 import {styles} from '../core/styles';
 
-class Homepage extends React.Component {
+class Resultats extends React.Component {
     constructor(props){
       super(props);
       this.state={
-        pseudo:""
+        
       }
       
     }
@@ -17,20 +17,13 @@ class Homepage extends React.Component {
         <SafeAreaView style={styles.container}>
             <View>
             <View>
-                <Text style={styles.titre}>Entrez votre pseudo pour commencer le Quizz</Text>
+                <Text style={styles.titre}>Résultats du Quizz</Text>
+                <Text>C'est terminé votre score est de : {this.state.score} / 3</Text>
             </View>
-            <TextInput
-                    label="Pseudo"
-                    returnKeyType="done"
-                    style={{ height: 40, borderColor: 'gray', borderWidth: 1, margin: 10, padding: 10, borderRadius: 5}}
-                    value={this.state.pseudo}
-                    onChangeText={text => this.setState({pseudo: text})}
-                    autoCapitalize="none"
-                    placeholder="Pseudo"
-                    />
+            
             <View style={styles.bouton}>
               <Button
-                title="Jouer"
+                title="Rejouer"
                 color= "royalblue"
                 onPress={() => navigate('Quizz')}
               />
@@ -42,4 +35,4 @@ class Homepage extends React.Component {
   
   }
   
-  export default Homepage;
+  export default Resultats;
